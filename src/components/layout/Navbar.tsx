@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X, PawPrint } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
+import { SITE_NAME } from "@/lib/site";
 
 const navLinks = [
   { href: "/", label: "Početna" },
@@ -43,7 +44,7 @@ export function Navbar() {
               <PawPrint className="w-5 h-5 text-cream" />
             </div>
             <span className="font-serif text-xl font-bold text-brown-dark">
-              Von Waldlicht
+              {SITE_NAME}
             </span>
           </Link>
 
@@ -86,7 +87,7 @@ export function Navbar() {
           <div className="w-72 bg-cream h-full flex flex-col p-6 shadow-2xl">
             <div className="flex items-center justify-between mb-8">
               <span className="font-serif text-xl font-bold text-brown-dark">
-                Von Waldlicht
+                {SITE_NAME}
               </span>
               <button
                 className="p-2 rounded-xl text-brown hover:bg-beige"

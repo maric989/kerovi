@@ -1,4 +1,6 @@
-export const WHATSAPP_NUMBER = "381601234567"; // replace with real number
+import { SITE_PHONE_RAW } from "@/lib/site";
+
+export const WHATSAPP_NUMBER = SITE_PHONE_RAW;
 
 export function whatsappLink(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

@@ -8,11 +8,12 @@ import { litters } from "@/lib/data/litters";
 import { dogs } from "@/lib/data/dogs";
 import { formatDate } from "@/lib/utils/formatDate";
 import { waitlistLink } from "@/lib/utils/whatsapp";
+import { SITE_NAME } from "@/lib/site";
 import { Calendar, Clock, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Roditelji legla",
-  description: "Prikaz aktivnih i planiranih legla uzgajivačnice Von Waldlicht. Prijavite se za listu čekanja.",
+  description: `Prikaz aktivnih i planiranih legla uzgajivačnice ${SITE_NAME}. Prijavite se za listu čekanja.`,
 };
 
 export default function LittersPage() {
@@ -25,7 +26,7 @@ export default function LittersPage() {
         </div>
         <div className="relative container-max max-w-7xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold">Roditelji legla</h1>
             <p className="mt-4 text-beige/80 text-lg max-w-xl mx-auto leading-relaxed">
               Upoznajte roditlje naših štenaca i saznajte više o planiranim i aktuelnim leglima.

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 import { ReactNode } from "react";
 
@@ -34,8 +35,17 @@ export function Button({
   };
 
   const classes = cn(base, variants[variant], sizes[size], className);
+  const isInternalLink = Boolean(href?.startsWith("/"));
 
   if (href) {
+    if (isInternalLink) {
+      return (
+        <Link href={href} className={classes}>
+          {children}
+        </Link>
+      );
+    }
+
     return (
       <a href={href} className={classes}>
         {children}

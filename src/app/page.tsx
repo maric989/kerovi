@@ -8,6 +8,7 @@ import { puppies } from "@/lib/data/puppies";
 import { testimonials } from "@/lib/data/testimonials";
 import { formatDate } from "@/lib/utils/formatDate";
 import { puppyInquiryLink } from "@/lib/utils/whatsapp";
+import { SITE_NAME } from "@/lib/site";
 import {
   Award, Heart, FileCheck, Phone, Star, Shield, Syringe, MapPin, ChevronRight,
 } from "lucide-react";
@@ -58,7 +59,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-20">
           <AnimatedSection>
             <p className="text-gold-light font-sans text-sm font-semibold tracking-widest uppercase mb-4">FCI registrovana uzgajivačnica</p>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-cream leading-tight max-w-2xl">Von Waldlicht</h1>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-cream leading-tight max-w-2xl">{SITE_NAME}</h1>
             <p className="mt-5 text-beige text-lg md:text-xl max-w-xl leading-relaxed">
               Odgovoran uzgoj rasnih pasa sa pažnjom na zdravlje, temperament i poreklo.
             </p>

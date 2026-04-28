@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -18,11 +19,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Von Waldlicht | Uzgajivačnica rasnih pasa",
-    template: "%s | Von Waldlicht",
+    default: `${SITE_NAME} | Uzgajivačnica rasnih pasa`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Odgovorna uzgajivačnica rasnih pasa. Dostupni štenci, zdravstveno testirani roditelji, rodovnik, dokumentacija i podrška nakon preuzimanja.",
+  description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({

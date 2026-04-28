@@ -6,6 +6,7 @@ import { dogs } from "@/lib/data/dogs";
 import { formatDate } from "@/lib/utils/formatDate";
 import { DogCategory } from "@/lib/types";
 import Link from "next/link";
+import { SITE_NAME } from "@/lib/site";
 
 const categoryLabels: { key: DogCategory | "all"; label: string }[] = [
   { key: "all", label: "Svi psi" },
@@ -28,7 +29,7 @@ export default function OurDogsPage() {
         </div>
         <div className="relative container-max max-w-7xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold">Naši psi</h1>
             <p className="mt-4 text-beige/80 text-lg max-w-xl mx-auto leading-relaxed">
               Upoznajte odrasle pse koji su temelj naše uzgajivačnice.

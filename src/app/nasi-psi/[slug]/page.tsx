@@ -5,6 +5,7 @@ import { dogs } from "@/lib/data/dogs";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
 import { formatDate } from "@/lib/utils/formatDate";
+import { SITE_NAME } from "@/lib/site";
 import { Award, Calendar, Heart } from "lucide-react";
 
 interface Props {
@@ -33,7 +34,7 @@ export default function DogProfilePage({ params }: Props) {
           <Image src={dog.coverImage} alt={dog.name} fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-brown-dark/70 via-transparent to-brown-dark/20" />
           <div className="absolute bottom-0 left-0 px-6 pb-8 max-w-7xl mx-auto w-full">
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-2">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-2">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-cream">{dog.name}</h1>
             <p className="text-beige/80 text-lg mt-1">{dog.gender === "male" ? "Mužjak" : "Ženka"} · {dog.color}</p>
           </div>

@@ -6,6 +6,7 @@ import "yet-another-react-lightbox/styles.css";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { galleryImages } from "@/lib/data/gallery";
 import { GalleryCategory } from "@/lib/types";
+import { SITE_NAME } from "@/lib/site";
 
 const categoryLabels: { key: GalleryCategory | "all"; label: string }[] = [
   { key: "all", label: "Sve" },
@@ -31,7 +32,7 @@ export default function GalleryPage() {
         </div>
         <div className="relative container-max max-w-7xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold">Galerija</h1>
             <p className="mt-4 text-beige/80 text-lg max-w-xl mx-auto">Pogledajte naše pse, štence, izložbe i srećne porodice.</p>
           </AnimatedSection>

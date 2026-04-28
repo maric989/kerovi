@@ -3,11 +3,12 @@ import { Metadata } from "next";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { SITE_NAME } from "@/lib/site";
 import { Heart, Star, Users, Home, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "O nama",
-  description: "Saznajte više o uzgajivačnici Von Waldlicht — naša priča, naše vrednosti i ljubav prema rasi.",
+  description: `Saznajte više o uzgajivačnici ${SITE_NAME} — naša priča, naše vrednosti i ljubav prema rasi.`,
 };
 
 const values = [
@@ -30,7 +31,7 @@ export default function AboutPage() {
           <AnimatedSection>
             <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Naša priča</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight max-w-2xl">
-              O uzgajivačnici Von Waldlicht
+              O uzgajivačnici {SITE_NAME}
             </h1>
             <p className="mt-5 text-beige/80 text-lg max-w-xl leading-relaxed">
               Uzgajivačnica nastala iz ljubavi prema rasi. Naš cilj je svako štene koje ode u odgovoran dom.
@@ -61,7 +62,7 @@ export default function AboutPage() {
             <SectionHeading eyebrow="Ko smo mi" title="Priča koja počinje ljubavlju" />
             <div className="mt-6 space-y-4 text-brown/75 leading-relaxed">
               <p>
-                Uzgajivačnica Von Waldlicht nastala je pre više od 15 godina iz čiste ljubavi prema rasi.
+                Uzgajivačnica {SITE_NAME} nastala je pre više od 15 godina iz čiste ljubavi prema rasi.
                 Ono što je počelo kao porodična strast, izraslo je u jednu od najcenjenijih uzgajivačnica u regionu.
               </p>
               <p>

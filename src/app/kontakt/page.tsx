@@ -6,13 +6,30 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { contactFormSchema, type ContactFormValues } from "@/lib/schemas/contact";
+import { SITE_EMAIL, SITE_LOCATION, SITE_NAME, SITE_PHONE, SITE_PHONE_RAW } from "@/lib/site";
 import { whatsappLink } from "@/lib/utils/whatsapp";
 import { Phone, Mail, MapPin, MessageCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
+function buildMailtoLink(data: ContactFormValues) {
+  const subject = `${SITE_NAME} — upit${data.interest ? ` za ${data.interest}` : ""}`;
+  const body = [
+    `Ime i prezime: ${data.fullName}`,
+    `Email: ${data.email}`,
+    `Telefon: ${data.phone}`,
+    `Zainteresovani za: ${data.interest}`,
+    `Da li ste ranije imali psa: ${data.hasPreviousDog}`,
+    `Gde bi pas živeo: ${data.livingArrangement}`,
+    "",
+    "Poruka:",
+    data.message,
+  ].join("\n");
+
+  return `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -27,23 +44,9 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    setSubmitError(null);
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-
-    if (!response.ok) {
-      setSubmitError(result.error ?? "Došlo je do greške prilikom slanja poruke.");
-      return;
+    if (typeof window !== "undefined") {
+      window.location.href = buildMailtoLink(data);
     }
-
     reset();
     setSubmitted(true);
   };
@@ -57,7 +60,7 @@ export default function ContactPage() {
         </div>
         <div className="relative container-max max-w-7xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold">Kontaktirajte nas</h1>
             <p className="mt-4 text-beige/80 text-lg max-w-xl mx-auto leading-relaxed">
               Spremi za novi član porodice? Pišite nam i mi ćemo Vam pomoći da pronađete pravo štene.
@@ -76,18 +79,21 @@ export default function ContactPage() {
                 <div className="bg-white rounded-2xl p-12 shadow-sm text-center">
                   <CheckCircle className="w-16 h-16 text-forest mx-auto mb-4" />
                   <h2 className="font-serif text-2xl font-bold text-brown-dark mb-2">Hvala Vam!</h2>
-                  <p className="text-brown/70">Primili smo Vašu poruku i javićemo Vam se u najkraćem mogućem roku.</p>
-                  <Button href="/" className="mt-6">Nazad na početnu</Button>
+                  <p className="text-brown/70">
+                    Otvorili smo Vašu email aplikaciju sa već popunjenim upitom. Ako se email klijent nije otvorio,
+                    možete nas kontaktirati direktno preko email-a ili WhatsApp-a.
+                  </p>
+                  <div className="mt-6 flex flex-wrap justify-center gap-3">
+                    <Button href={`mailto:${SITE_EMAIL}`}>Pošalji email</Button>
+                    <Button href={whatsappLink("Zdravo! Zainteresovan/a sam za Vaše štence.")} variant="outline">
+                      WhatsApp
+                    </Button>
+                  </div>
                 </div>
               ) : (
                 <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
                   <SectionHeading eyebrow="Upit" title="Pošaljite nam poruku" />
                   <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-5">
-                    {submitError && (
-                      <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-                        {submitError}
-                      </div>
-                    )}
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-sm font-medium text-brown mb-1.5">Ime i prezime *</label>
@@ -172,15 +178,15 @@ export default function ContactPage() {
                   <h3 className="font-serif text-lg font-bold text-brown-dark">Kontakt podaci</h3>
                   <div className="flex items-center gap-3 text-sm text-brown/70">
                     <Phone className="w-4 h-4 text-gold shrink-0" />
-                    <a href="tel:+381601234567" className="hover:text-brown transition">+381 60 123 4567</a>
+                    <a href={`tel:+${SITE_PHONE_RAW}`} className="hover:text-brown transition">{SITE_PHONE}</a>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-brown/70">
                     <Mail className="w-4 h-4 text-gold shrink-0" />
-                    <a href="mailto:info@vonwaldlicht.rs" className="hover:text-brown transition">info@vonwaldlicht.rs</a>
+                    <a href={`mailto:${SITE_EMAIL}`} className="hover:text-brown transition">{SITE_EMAIL}</a>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-brown/70">
                     <MapPin className="w-4 h-4 text-gold shrink-0" />
-                    <span>Srbija</span>
+                    <span>{SITE_LOCATION}</span>
                   </div>
                 </div>
 

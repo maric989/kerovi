@@ -8,6 +8,7 @@ import { puppies } from "@/lib/data/puppies";
 import { formatDate } from "@/lib/utils/formatDate";
 import { puppyInquiryLink } from "@/lib/utils/whatsapp";
 import { Button } from "@/components/ui/Button";
+import { SITE_NAME } from "@/lib/site";
 import { MessageCircle } from "lucide-react";
 
 type StatusFilter = "all" | "available" | "reserved" | "sold";
@@ -38,7 +39,7 @@ export default function PuppiesPage() {
         </div>
         <div className="relative container-max max-w-7xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">Von Waldlicht</p>
+            <p className="text-gold font-sans text-sm font-semibold tracking-widest uppercase mb-3">{SITE_NAME}</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight">Dostupni štenci</h1>
             <p className="mt-4 text-beige/80 text-lg max-w-xl mx-auto leading-relaxed">
               Svako štene je posebno. Pronađite pravog prijatelja za svoju porodicu.
