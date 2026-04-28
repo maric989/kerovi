@@ -1,0 +1,81 @@
+import { Puppy } from "@/lib/types";
+
+export const puppies: Puppy[] = [
+  {
+    id: "muzjak-1",
+    slug: "muzjak-1",
+    name: "Mužjak 1",
+    gender: "male",
+    dateOfBirth: "2026-03-10",
+    color: "Zlatna",
+    status: "available",
+    temperament: "Miran, radoznao i veoma prijatan. Odlično reaguje na socijalizaciju.",
+    litterId: "leglo-2026-a",
+    images: [
+      "https://images.unsplash.com/photo-1612914039066-9b9a5e6c5a72?w=800&q=80",
+      "https://images.unsplash.com/photo-1606425271394-c3ca9aa1fc06?w=800&q=80",
+    ],
+    coverImage: "https://images.unsplash.com/photo-1612914039066-9b9a5e6c5a72?w=800&q=80",
+  },
+  {
+    id: "muzjak-2",
+    slug: "muzjak-2",
+    name: "Mužjak 2",
+    gender: "male",
+    dateOfBirth: "2026-03-10",
+    color: "Crna sa paležom",
+    status: "reserved",
+    temperament: "Energičan, igračan i veoma pametno. Prirodni lider u leglu.",
+    litterId: "leglo-2026-a",
+    images: [
+      "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=800&q=80",
+    ],
+    coverImage: "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=800&q=80",
+  },
+  {
+    id: "zenka-1",
+    slug: "zenka-1",
+    name: "Ženka 1",
+    gender: "female",
+    dateOfBirth: "2026-03-10",
+    color: "Zlatna",
+    status: "available",
+    temperament: "Nežna, brižna i izuzetno privrženena. Savršena za porodicu sa decom.",
+    litterId: "leglo-2026-a",
+    images: [
+      "https://images.unsplash.com/photo-1596452951503-4db40c436b5b?w=800&q=80",
+    ],
+    coverImage: "https://images.unsplash.com/photo-1596452951503-4db40c436b5b?w=800&q=80",
+  },
+  {
+    id: "zenka-2",
+    slug: "zenka-2",
+    name: "Ženka 2",
+    gender: "female",
+    dateOfBirth: "2026-03-10",
+    color: "Braon",
+    status: "sold",
+    temperament: "Radoznala, živahna i veoma komunikativna. Odlično se snalazi u novim situacijama.",
+    litterId: "leglo-2026-a",
+    images: [
+      "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+    ],
+    coverImage: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+  },
+  {
+    id: "muzjak-3",
+    slug: "muzjak-3",
+    name: "Mužjak 3",
+    gender: "male",
+    dateOfBirth: "2026-03-10",
+    color: "Zlatna",
+    status: "available",
+    temperament: "Smiren, siguran i pun poverenja. Odlična osnova za poslušnost ili sport.",
+    litterId: "leglo-2026-a",
+    images: [
+      "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800&q=80",
+    ],
+    coverImage: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800&q=80",
+  },
+];
+

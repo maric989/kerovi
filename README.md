@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Von Waldlicht — sajt za uzgajivačnicu pasa
 
-## Getting Started
+Moderan MVP sajt za uzgajivačnicu pasa napravljen u `Next.js 14`, `TypeScript` i `Tailwind CSS`.
 
-First, run the development server:
+## Šta je urađeno
+
+- Početna stranica sa hero sekcijom, badge-ovima poverenja i CTA blokovima
+- Stranica `O nama`
+- Stranica `Dostupni štenci` sa filterom po statusu
+- Stranica `Roditelji legla` / planirana legla
+- Stranica `Naši psi` sa filterom po kategorijama
+- Profil stranice za svakog odraslog psa
+- Stranica `Galerija` sa filterom i lightbox pregledom
+- Stranica `Kontakt` sa validacijom forme i API endpoint-om
+
+## Tehnologije
+
+- `Next.js 14` (App Router)
+- `TypeScript`
+- `Tailwind CSS`
+- `react-hook-form` + `zod`
+- `framer-motion`
+- `lucide-react`
+- `yet-another-react-lightbox`
+
+## Pokretanje projekta
+
+Instalacija zavisnosti:
+
+```bash
+npm install
+```
+
+Pokretanje development servera:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Otvori u browseru:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Provera projekta
 
-## Learn More
+TypeScript provera:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx tsc --noEmit
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Production build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Pokretanje production servera lokalno:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Struktura sadržaja
+
+Sadržaj sajta se trenutno čuva lokalno u TypeScript fajlovima:
+
+- `src/lib/data/dogs.ts`
+- `src/lib/data/puppies.ts`
+- `src/lib/data/litters.ts`
+- `src/lib/data/gallery.ts`
+- `src/lib/data/testimonials.ts`
+
+To znači da lako možeš da menjaš tekstove, slike i statuse bez menjanja same UI logike.
+
+## Kontakt forma
+
+Kontakt forma šalje podatke na:
+
+- `POST /api/contact`
+
+Za MVP, podaci se validiraju i beleže na serveru kroz `console.log`. Sledeći korak može biti:
+
+- slanje email-a
+- čuvanje upita u bazi
+- povezivanje sa CMS/admin panelom
+
+## Sledeći predlozi
+
+- zamena placeholder Unsplash slika pravim fotografijama pasa
+- dodavanje pravog WhatsApp broja u `src/lib/utils/whatsapp.ts`
+- povezivanje kontakt forme sa email servisom
+- SEO metadata po svakoj stranici i Open Graph slike
+- višejezičnost (`sr` / `en`)
+- admin panel za upravljanje psima, leglima i upitima
