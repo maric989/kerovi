@@ -61,7 +61,7 @@ export default function HomePage() {
             <p className="text-gold-light font-sans text-sm font-semibold tracking-widest uppercase mb-4">FCI registrovana uzgajivačnica</p>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-cream leading-tight max-w-2xl">{SITE_NAME}</h1>
             <p className="mt-5 text-beige text-lg md:text-xl max-w-xl leading-relaxed">
-              Odgovoran uzgoj rasnih pasa sa pažnjom na zdravlje, temperament i poreklo.
+              Uzgoj Srednjeazijskog ovčara sa pažnjom na zdravlje, moć i stabilni temperament. Psi za prave domove.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/dostupni-stenci" size="lg">Dostupni štenci</Button>

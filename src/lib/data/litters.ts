@@ -8,10 +8,10 @@ export const litters: Litter[] = [
     fatherId: "max",
     birthDate: "2026-03-10",
     status: "born",
-    expectedColors: ["Zlatna", "Crna sa paležom", "Braon"],
+      expectedColors: ["Bela sa sivim", "Siva", "Krem bela"],
     expectedPickupDate: "2026-05-10",
     waitlistOpen: false,
-    description: "Prelepo leglo od naše najcenjenije combinacije. Luna i Max su porodili 7 zdravih štenaca sa odličnim temperamentom.",
+      description: "Prekrасno leglo od naše najcenjenije kombinacije. Djinar i Max su porodili 6 zdravih štenaca sa izuzetnim temperamentom i zaštitničkim instinktima. Idealna kombinacija moći i karaktera.",
   },
   {
     id: "leglo-2026-b",
@@ -20,10 +20,10 @@ export const litters: Litter[] = [
     fatherId: "rex",
     birthDate: null,
     status: "planned",
-    expectedColors: ["Krem bela", "Zlatna", "Braon"],
+      expectedColors: ["Krem bela", "Bela", "Siva"],
     expectedPickupDate: "2026-10-01",
     waitlistOpen: true,
-    description: "Planirano elitno leglo od dva naša šampiona. Očekujemo štenada sa izvanrednim karakterom i izložbenim potencijalom.",
+      description: "Planirano elitno leglo od dva naša šampiona Srednjeazijskog ovčara. Očekujemo štenada sa izvanrednim karakterom, zdravljem i zaštitničkim sposobnostima.",
   },
 ];
 

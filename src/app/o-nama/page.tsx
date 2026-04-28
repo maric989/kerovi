@@ -34,7 +34,7 @@ export default function AboutPage() {
               O uzgajivačnici {SITE_NAME}
             </h1>
             <p className="mt-5 text-beige/80 text-lg max-w-xl leading-relaxed">
-              Uzgajivačnica nastala iz ljubavi prema rasi. Naš cilj je svako štene koje ode u odgovoran dom.
+              Uzgajivačnica nastala iz ljubavi prema Srednjeazijskom ovčaru. Naš cilj je uzgajanje zdravih, moćnih pasa za prave domove.
             </p>
           </AnimatedSection>
         </div>
@@ -62,19 +62,19 @@ export default function AboutPage() {
             <SectionHeading eyebrow="Ko smo mi" title="Priča koja počinje ljubavlju" />
             <div className="mt-6 space-y-4 text-brown/75 leading-relaxed">
               <p>
-                Uzgajivačnica {SITE_NAME} nastala je pre više od 15 godina iz čiste ljubavi prema rasi.
+                Uzgajivačnica {SITE_NAME} nastala je pre više od 15 godina iz čiste ljubavi prema Srednjeazijskom ovčaru.
                 Ono što je počelo kao porodična strast, izraslo je u jednu od najcenjenijih uzgajivačnica u regionu.
               </p>
               <p>
-                Naš fokus uvek bio na zdravlju, karakteru i socijalizaciji — ne samo na izložbenim uspesima.
-                Verujemo da svaki pas treba da bude zdrav, srećan i spreman za život uz svoju porodicu.
+                Naš fokus je na zdravlju, snazi, stabilnom temperamentu i zaštitničkim sposobnostima.
+                Verujemo da svaki Srednjeazijski ovčar treba da bude moćan, zdrav, inteligentna zaštitnica i porodična ljubimac.
               </p>
               <p>
-                Svako leglo pažljivo planiramo, birajući roditelje sa dokazanim zdravstvenim profilom i
-                stabilnim temperamentom. Štenci odrastaju u porodičnom okruženju, uz nas, deca i drugi psi.
+                Svako leglo pažljivo planiramo sa ciljem da očuvamo najbolje osobine rase. Biramo roditelje sa izuzetnim pedigreom,
+                zdravstvenim testovima i zaštitničkim sposobnostima. Štenci odrastaju kod nas sa decom, drugim psima i bogatom socijalizacijom.
               </p>
               <p>
-                Naš cilj nije samo da prodamo štene — već da nađemo pravi dom za svakog malog člana naše porodice.
+                Naš cilj nije samo da prodamo štene — već da nađemo pravi, odgovoran dom za štenče koje je sprema za nov početak.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
@@ -113,9 +113,9 @@ export default function AboutPage() {
           <AnimatedSection>
             <SectionHeading eyebrow="Socijalizacija" title="Kako odrastaju naši štenci" light />
             <div className="mt-6 space-y-4 text-beige/80 leading-relaxed">
-              <p>Rad sa štencima počinje od samog rođenja. Primenjujemo Early Neurological Stimulation (ENS) metodu koja jača nervni sistem i priprema štene za sve izazove.</p>
-              <p>Tokom odrastanja štenci su izloženi raznim zvucima, mirisima, površinama i situacijama. Uče da se igraju sa decom, odraslima i drugim psima.</p>
-              <p>Posebna pažnja posvećujemo individualizovanom radu sa svakim štencem — prepoznajemo karakterne razlike i usmeravamo razvoj.</p>
+              <p>Rad sa štenima počinje od samog rođenja. Primenjujemo Early Neurological Stimulation (ENS) metodu koja razvija nervni sistem i sprema psa za sve izazove.</p>
+              <p>Tokom odrastanja štenci su izloženi raznim zvucima, mirisima, površinama i okruženjima. Razvijamo prirodne zaštitničke instinkte, učimo ih da se ponašaju pažljivo sa decom i drugim psima.</p>
+              <p>Posebna pažnja posvećujemo pripremi svakog šteneta za odgovoran dom. Štence treniramo na poslušnost, razvijamo inteligenciju i ojačavamo njihov prirodan zaštitni instinkt.</p>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.15}>
