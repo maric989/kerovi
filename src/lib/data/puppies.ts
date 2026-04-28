@@ -12,10 +12,10 @@ export const puppies: Puppy[] = [
     temperament: "Snažan, samopouzdan i prirodan lider. Inteligentna jezgra sa zaštitničkim instinktima. Odličan sa porodicom.",
     litterId: "leglo-2026-a",
     images: [
-      "https://images.unsplash.com/photo-1612914039066-9b9a5e6c5a72?w=800&q=80",
-        "https://images.unsplash.com/photo-1618826411640-d6df44b4b37b?w=800&q=80",
+      "/images/1.jpeg",
+        "/images/22.jpg",
     ],
-    coverImage: "https://images.unsplash.com/photo-1618826411640-d6df44b4b37b?w=800&q=80",
+    coverImage: "/images/1.jpeg",
   },
   {
     id: "muzjak-2",
@@ -28,9 +28,9 @@ export const puppies: Puppy[] = [
       temperament: "Energičan, odličan učenik. Prirodni zaštitnik sa visokom inteligencijom. Pouzdan i brz u učenju.",
     litterId: "leglo-2026-a",
     images: [
-        "https://images.unsplash.com/photo-1633722715463-d30628ceb4b2?w=800&q=80",
+        "/images/33.jpg",
     ],
-     coverImage: "https://images.unsplash.com/photo-1633722715463-d30628ceb4b2?w=800&q=80",
+     coverImage: "/images/33.jpg",
   },
   {
     id: "zenka-1",
@@ -43,9 +43,9 @@ export const puppies: Puppy[] = [
       temperament: "Nežna ali snažna, brižna zaštitnica. Izuzetno privrženena porodici. Odličan izbor za dobar dom.",
     litterId: "leglo-2026-a",
     images: [
-        "https://images.unsplash.com/photo-1605667405924-d4af99424433?w=800&q=80",
+        "/images/43.jpg",
     ],
-     coverImage: "https://images.unsplash.com/photo-1605667405924-d4af99424433?w=800&q=80",
+     coverImage: "/images/43.jpg",
   },
   {
     id: "zenka-2",
@@ -58,9 +58,9 @@ export const puppies: Puppy[] = [
       temperament: "Živahna, komunikativna i smelа. Prirodna voditeljica sa zaštitničkim instinktima. Brzo raste i razvija se.",
     litterId: "leglo-2026-a",
     images: [
-        "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
+        "/images/54.jpg",
     ],
-     coverImage: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
+     coverImage: "/images/54.jpg",
   },
   {
     id: "muzjak-3",
@@ -73,9 +73,9 @@ export const puppies: Puppy[] = [
       temperament: "Smiren, siguran i pun poverenja. Odličan izbor za dobar dom. Prirodan zaštitnik sa dobrim temperamentom.",
     litterId: "leglo-2026-a",
     images: [
-        "https://images.unsplash.com/photo-1605667405924-d4af99424433?w=800&q=80",
+        "/images/55.jpeg",
     ],
-     coverImage: "https://images.unsplash.com/photo-1605667405924-d4af99424433?w=800&q=80",
+     coverImage: "/images/55.jpeg",
   },
 ];
 
